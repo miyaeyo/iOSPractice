@@ -1,0 +1,270 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9E09DA681B9DE707000071B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E09DA671B9DE707000071B2 /* main.m */; };
+		9E09DA701B9DEF54000071B2 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E09DA6F1B9DEF54000071B2 /* Student.m */; };
+		9E09DA7C1B9E9C23000071B2 /* Grade.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E09DA7B1B9E9C23000071B2 /* Grade.m */; };
+		9E09DA7F1B9EA8FA000071B2 /* GradeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E09DA7E1B9EA8FA000071B2 /* GradeManager.m */; };
+		9E09DA831B9FEC53000071B2 /* Student+GradeSortable.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E09DA821B9FEC53000071B2 /* Student+GradeSortable.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9E09DA621B9DE707000071B2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9E09DA641B9DE707000071B2 /* GradeManagementSystem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GradeManagementSystem; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E09DA671B9DE707000071B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9E09DA6E1B9DEF54000071B2 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		9E09DA6F1B9DEF54000071B2 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		9E09DA7A1B9E9C23000071B2 /* Grade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grade.h; sourceTree = "<group>"; };
+		9E09DA7B1B9E9C23000071B2 /* Grade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grade.m; sourceTree = "<group>"; };
+		9E09DA7D1B9EA8FA000071B2 /* GradeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradeManager.h; sourceTree = "<group>"; };
+		9E09DA7E1B9EA8FA000071B2 /* GradeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradeManager.m; sourceTree = "<group>"; };
+		9E09DA801B9FD9AD000071B2 /* GradeSortable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradeSortable.h; sourceTree = "<group>"; };
+		9E09DA811B9FEC53000071B2 /* Student+GradeSortable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+GradeSortable.h"; sourceTree = "<group>"; };
+		9E09DA821B9FEC53000071B2 /* Student+GradeSortable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+GradeSortable.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9E09DA611B9DE707000071B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9E09DA5B1B9DE707000071B2 = {
+			isa = PBXGroup;
+			children = (
+				9E09DA661B9DE707000071B2 /* GradeManagementSystem */,
+				9E09DA651B9DE707000071B2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9E09DA651B9DE707000071B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9E09DA641B9DE707000071B2 /* GradeManagementSystem */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9E09DA661B9DE707000071B2 /* GradeManagementSystem */ = {
+			isa = PBXGroup;
+			children = (
+				9E09DA671B9DE707000071B2 /* main.m */,
+				9E09DA6E1B9DEF54000071B2 /* Student.h */,
+				9E09DA6F1B9DEF54000071B2 /* Student.m */,
+				9E09DA7A1B9E9C23000071B2 /* Grade.h */,
+				9E09DA7B1B9E9C23000071B2 /* Grade.m */,
+				9E09DA7D1B9EA8FA000071B2 /* GradeManager.h */,
+				9E09DA7E1B9EA8FA000071B2 /* GradeManager.m */,
+				9E09DA801B9FD9AD000071B2 /* GradeSortable.h */,
+				9E09DA811B9FEC53000071B2 /* Student+GradeSortable.h */,
+				9E09DA821B9FEC53000071B2 /* Student+GradeSortable.m */,
+			);
+			path = GradeManagementSystem;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9E09DA631B9DE707000071B2 /* GradeManagementSystem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E09DA6B1B9DE707000071B2 /* Build configuration list for PBXNativeTarget "GradeManagementSystem" */;
+			buildPhases = (
+				9E09DA601B9DE707000071B2 /* Sources */,
+				9E09DA611B9DE707000071B2 /* Frameworks */,
+				9E09DA621B9DE707000071B2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GradeManagementSystem;
+			productName = GradeManagementSystem;
+			productReference = 9E09DA641B9DE707000071B2 /* GradeManagementSystem */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9E09DA5C1B9DE707000071B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = miyaeyo;
+				TargetAttributes = {
+					9E09DA631B9DE707000071B2 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = 9E09DA5F1B9DE707000071B2 /* Build configuration list for PBXProject "GradeManagementSystem" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9E09DA5B1B9DE707000071B2;
+			productRefGroup = 9E09DA651B9DE707000071B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9E09DA631B9DE707000071B2 /* GradeManagementSystem */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9E09DA601B9DE707000071B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E09DA7C1B9E9C23000071B2 /* Grade.m in Sources */,
+				9E09DA831B9FEC53000071B2 /* Student+GradeSortable.m in Sources */,
+				9E09DA681B9DE707000071B2 /* main.m in Sources */,
+				9E09DA701B9DEF54000071B2 /* Student.m in Sources */,
+				9E09DA7F1B9EA8FA000071B2 /* GradeManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9E09DA691B9DE707000071B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9E09DA6A1B9DE707000071B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9E09DA6C1B9DE707000071B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9E09DA6D1B9DE707000071B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9E09DA5F1B9DE707000071B2 /* Build configuration list for PBXProject "GradeManagementSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E09DA691B9DE707000071B2 /* Debug */,
+				9E09DA6A1B9DE707000071B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E09DA6B1B9DE707000071B2 /* Build configuration list for PBXNativeTarget "GradeManagementSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E09DA6C1B9DE707000071B2 /* Debug */,
+				9E09DA6D1B9DE707000071B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9E09DA5C1B9DE707000071B2 /* Project object */;
+}

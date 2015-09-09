@@ -1,0 +1,1 @@
+Name		Korean		English		mathAbraham		100		60		80Bob		45		90		100Cindy		89		90		49Din		68		30		99Edward		78		67		89
