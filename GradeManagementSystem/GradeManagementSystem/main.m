@@ -16,7 +16,7 @@ int main(int argc, const char * argv[]) {
         //성적 txt파일 path를 입력하면
         //sorting하여
         //출력함
-        //filePath: /Users/miyaeyo/Dropbox/NHN_NEXT_2학기/IOS/GradeManagementSystem/grade.txt
+        //filePath: /Users/miyaeyo/Dropbox/NHN_NEXT_2학기/IOS/IOS_practice/GradeManagementSystem/grade.txt
         
         char filePathInput[100];
         printf("Input grade file path: ");
@@ -26,10 +26,10 @@ int main(int argc, const char * argv[]) {
         GradeManager *gradeManager = [GradeManager gradeManagerWithGradeFile: filePath];
         
         char sortingOptionInput[10];
-        printf("Input sorting option (Korean, English, Math, GPA): ");
+        printf("Input sorting option (korean, english, math, GPA): ");
         scanf("%s", sortingOptionInput);
         NSString *sortingOption = [NSString stringWithUTF8String:sortingOptionInput];
-        [gradeManager printGradeTableSortBy:sortingOption];
+        [gradeManager printGradeTable:[gradeManager gradeSortBy:sortingOption]];
         
     }
     return 0;

@@ -12,7 +12,7 @@
 
 - (double)gradeFromSortingOption:(NSString *)sortingOption
 {
-    
+    return [[[self grade] valueForKey:sortingOption] doubleValue];
 }
 
 @end

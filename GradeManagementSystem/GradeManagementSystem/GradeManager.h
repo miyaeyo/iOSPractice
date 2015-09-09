@@ -12,8 +12,8 @@
 
 @property (nonatomic, readonly) NSArray *tableWithStudent;
 
-+ (instancetype)gradeManagerWithGradeFile:(NSString *) gradeFilePath;
-- (NSArray *)GradeSortBy:(NSString *)sortingOption;
-- (void)printGradeTable;
++ (instancetype)gradeManagerWithGradeFile:(NSString *)gradeFilePath;
+- (NSArray *)gradeSortBy:(NSString *)sortingOption;
+- (void)printGradeTable:(NSArray *)gradeTable;
 
 @end
