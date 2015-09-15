@@ -12,6 +12,8 @@
 		9E09DA7C1B9E9C23000071B2 /* Grade.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E09DA7B1B9E9C23000071B2 /* Grade.m */; };
 		9E09DA7F1B9EA8FA000071B2 /* GradeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E09DA7E1B9EA8FA000071B2 /* GradeManager.m */; };
 		9E09DA831B9FEC53000071B2 /* Student+GradeSortable.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E09DA821B9FEC53000071B2 /* Student+GradeSortable.m */; };
+		9E09DA861BA09C43000071B2 /* GradeManager+Observerble.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E09DA851BA09C43000071B2 /* GradeManager+Observerble.m */; };
+		9E09DA891BA09EDE000071B2 /* Student+observer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E09DA881BA09EDE000071B2 /* Student+observer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +40,10 @@
 		9E09DA801B9FD9AD000071B2 /* GradeSortable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradeSortable.h; sourceTree = "<group>"; };
 		9E09DA811B9FEC53000071B2 /* Student+GradeSortable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+GradeSortable.h"; sourceTree = "<group>"; };
 		9E09DA821B9FEC53000071B2 /* Student+GradeSortable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+GradeSortable.m"; sourceTree = "<group>"; };
+		9E09DA841BA09C43000071B2 /* GradeManager+Observerble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GradeManager+Observerble.h"; sourceTree = "<group>"; };
+		9E09DA851BA09C43000071B2 /* GradeManager+Observerble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GradeManager+Observerble.m"; sourceTree = "<group>"; };
+		9E09DA871BA09EDE000071B2 /* Student+observer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+observer.h"; sourceTree = "<group>"; };
+		9E09DA881BA09EDE000071B2 /* Student+observer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+observer.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,10 @@
 				9E09DA801B9FD9AD000071B2 /* GradeSortable.h */,
 				9E09DA811B9FEC53000071B2 /* Student+GradeSortable.h */,
 				9E09DA821B9FEC53000071B2 /* Student+GradeSortable.m */,
+				9E09DA841BA09C43000071B2 /* GradeManager+Observerble.h */,
+				9E09DA851BA09C43000071B2 /* GradeManager+Observerble.m */,
+				9E09DA871BA09EDE000071B2 /* Student+observer.h */,
+				9E09DA881BA09EDE000071B2 /* Student+observer.m */,
 			);
 			path = GradeManagementSystem;
 			sourceTree = "<group>";
@@ -141,6 +151,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E09DA7C1B9E9C23000071B2 /* Grade.m in Sources */,
+				9E09DA891BA09EDE000071B2 /* Student+observer.m in Sources */,
+				9E09DA861BA09C43000071B2 /* GradeManager+Observerble.m in Sources */,
 				9E09DA831B9FEC53000071B2 /* Student+GradeSortable.m in Sources */,
 				9E09DA681B9DE707000071B2 /* main.m in Sources */,
 				9E09DA701B9DEF54000071B2 /* Student.m in Sources */,
@@ -263,6 +275,7 @@
 				9E09DA6D1B9DE707000071B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

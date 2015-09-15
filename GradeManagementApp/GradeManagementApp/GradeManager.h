@@ -1,20 +1,23 @@
 //
 //  GradeManager.h
-//  GradeManagementSystem
+//  GradeManagementApp
 //
-//  Created by miyaeyo on 2015. 9. 8..
+//  Created by miyaeyo on 2015. 9. 13..
 //  Copyright (c) 2015년 miyaeyo. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
+
 @interface GradeManager : NSObject
 
-@property (nonatomic, readonly) NSArray *tableWithStudent;
+
+@property (nonatomic, readonly) NSArray *tableOfStudent;
+
 
 + (instancetype)gradeManagerWithGradeFile:(NSString *)gradeFile;
 - (NSArray *)gradeSortBy:(NSString *)sortingOption;
-//- (NSArray *)modifyWhos:(NSString *)name subject:(NSString *)subject grade:(double)grade;
 - (void)printGradeTable:(NSArray *)gradeTable;
+
 
 @end

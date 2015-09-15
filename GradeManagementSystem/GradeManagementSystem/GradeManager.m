@@ -9,6 +9,7 @@
 #import "GradeManager.h"
 #import "Student.h"
 #import "Student+GradeSortable.h" 
+#import "GradeManager+Observerble.h"
 
 
 @implementation GradeManager
@@ -20,33 +21,28 @@
 @synthesize tableWithStudent = mTableWithStudent;
 
 
-+ (instancetype)gradeManagerWithGradeFile: (NSString *)gradeFilePath
++ (instancetype)gradeManagerWithGradeFile: (NSString *)gradeFile
 {
-    return [[[GradeManager alloc] initWithGradeFile: gradeFilePath] autorelease];
+    return [[[GradeManager alloc] initWithGradeFile: gradeFile] autorelease];
 }
 
 
-- (instancetype)initWithGradeFile: (NSString *)gradeFilePath
+- (instancetype)initWithGradeFile:(NSString *)gradeFile
 {
     self = [super init];
     
     if(self)
     {
-        mTableWithStudent = [[self parseGradeFile: gradeFilePath] retain];
+        mTableWithStudent = [[self parseGradeFile: gradeFile] retain];
     }
     
     return self;
 }
 
 
-- (NSArray *)parseGradeFile: (NSString *)gradeFilePath
+- (NSArray *)parseGradeFile:(NSString *)gradeFile
 {
-   
-    NSString *fileContentsToString = [NSString stringWithContentsOfFile:gradeFilePath
-                                                               encoding:NSUTF8StringEncoding
-                                                                  error:nil];
-    
-    NSArray *studentsGradeByRow = [fileContentsToString componentsSeparatedByString:@"\r"];
+    NSArray *studentsGradeByRow = [gradeFile componentsSeparatedByString:@"\r"];
     NSMutableArray *gradeTable = [[[NSMutableArray alloc] init] autorelease];
         
     NSString *studentInfo;
@@ -63,6 +59,7 @@
             
         Grade *grade = [Grade gradeWithGrade: parsedGrade];
         Student *student = [Student studentWithName:[parsedStudentInfo firstObject] grade: grade];
+        [self registerAsObserver:student forGrade:grade];
             
         [gradeTable addObject:student];
     }
@@ -93,10 +90,17 @@
 }
 
 
+//- (NSArray *)modifyWhos:(NSString *)name subject:(NSString *)subject grade:(double)grade
+//{
+//    
+//}
+//
+
 - (void)printGradeTable:(NSArray *)gradeTable
 {
     printf("\tName\t|\tKorean\t|\tEnglish\t|\tMath\t|\tTotal\t|\tGPA\n");
     printf("=======================================================================\n");
+    
     for(Student *student in gradeTable)
     {
         NSString *name = [student name];
@@ -107,7 +111,15 @@
 }
 
 
+- (void)dealloc
+{
+    [mTableWithStudent release];
+    
+    [super dealloc];
+}
 
+
+@end
 
 
 /* comment: 1. printGradeTableSortBy -> method명에서 봐도 알 수 있듯이 두가지의 기능을 한번에 수행한다. 분리하는 것이 좋다.
@@ -142,12 +154,3 @@
 //}
 
 
-- (void)dealloc
-{
-    [mTableWithStudent release];
-    
-    [super dealloc];
-}
-
-
-@end

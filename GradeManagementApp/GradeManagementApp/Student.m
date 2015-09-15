@@ -1,8 +1,8 @@
 //
 //  Student.m
-//  GradeManagementSystem
+//  GradeManagementApp
 //
-//  Created by miyaeyo on 2015. 9. 8..
+//  Created by miyaeyo on 2015. 9. 13..
 //  Copyright (c) 2015년 miyaeyo. All rights reserved.
 //
 
@@ -46,6 +46,4 @@
     
     [super dealloc];
 }
-
-
 @end

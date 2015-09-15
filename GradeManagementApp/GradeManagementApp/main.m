@@ -1,25 +1,28 @@
 //
 //  main.m
-//  GradeManagementSystem
+//  GradeManagementApp
 //
-//  Created by miyaeyo on 2015. 9. 8..
+//  Created by miyaeyo on 2015. 9. 10..
 //  Copyright (c) 2015년 miyaeyo. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "GradeManager.h"
-#import "Student.h"
+#import "MyApplication.h"
+#import "AppDelegate.h"
 
+//filePath: /Users/miyaeyo/Dropbox/NHN_NEXT_2학기/IOS/IOS_practice/GradeManagementSystem/grade.txt
 
 int main(int argc, const char * argv[]) {
-    //성적 txt파일 path를 입력하면
-    //과목별 혹은 평점으로 sorting(ascending)하여
-    //출력함
-    //filePath: /Users/miyaeyo/Dropbox/NHN_NEXT_2학기/IOS/IOS_practice/GradeManagementSystem/grade.txt
     @autoreleasepool {
+        MyApplication *myApp = [MyApplication MyApplicationMainWithAppDelegate:[AppDelegate class]];
+        
+        
         printf("****** Grade Management System ******\n");
+        
         int loopCount = 0;
-        while (1) {
+        
+        while (1)
+        {
             char startInput;
             if(loopCount == 0) printf("\nDo you want to start Grade Management System (Y / N)? ");
             else printf("\nDo you have other grade file (Y / N)?");
@@ -31,11 +34,12 @@ int main(int argc, const char * argv[]) {
                 printf("\nFinish this program.\nBYE BYE!\n");
                 break;
             }
+            
             else if (startInput == 'Y' || startInput == 'y')
             {
                 @autoreleasepool {
                     
-                    GradeManager *gradeManager;
+                    Event *event;
                     
                     char filePathInput[100];
                     
@@ -51,7 +55,9 @@ int main(int argc, const char * argv[]) {
                                                                                       error:nil];
                         if (fileContentsToString)
                         {
-                            gradeManager = [GradeManager gradeManagerWithGradeFile: fileContentsToString];
+                            event = [Event eventWithKey:@"filePath" value:fileContentsToString];
+                            [[myApp eventQueue] setEvent:event];
+
                             break;
                         }
                         else printf("\n!!!invalid file or empty file.\nPlease check the file path.\n");
@@ -67,47 +73,22 @@ int main(int argc, const char * argv[]) {
                         rewind(stdin);
                         
                         if (strcmp(sortingOptionInput, "korean") || strcmp(sortingOptionInput, "english")
-                           || strcmp(sortingOptionInput, "math") || strcmp(sortingOptionInput, "GPA")) break;
+                            || strcmp(sortingOptionInput, "math") || strcmp(sortingOptionInput, "GPA")) break;
                         else printf("\n!!!Wrong input.\nPlease check the sorting option (korean, english, math, GPA).\n");
                         
                     }while (1);
                     
                     NSString *sortingOption = [NSString stringWithUTF8String:sortingOptionInput];
-                    [gradeManager printGradeTable:[gradeManager gradeSortBy:sortingOption]];
+                    event = [Event eventWithKey:@"sortingOption" value:sortingOption];
+                    [[myApp eventQueue] setEvent:event];
                     
-//                    
-//                    // KVO를 사용해 보려고...
-//                    char modifyInput;
-//                    
-//                    do{
-//                        printf("Do you want to modify some score (Y / N)? ");
-//                        scanf("%c", &modifyInput);
-//                        if (modifyInput == 'N' || modifyInput == 'n') break;
-//                        else if (modifyInput == 'Y' || modifyInput == 'y')
-//                        {
-//                            char tName[10];
-//                            char tSubject[10];
-//                            double grade;
-//                            
-//                            printf("Input student name and subject of score modified (name subject grade): ");
-//                            scanf("%s %s %lf", tName, tSubject, &grade);
-//                            NSString *name = [NSString stringWithUTF8String:tName];
-//                            NSString *subject = [NSString stringWithUTF8String:tSubject];
-//                            
-//                            [gradeManager printGradeTable:[gradeManager modifyWhos:name subject:subject grade:grade]];
-//                            
-//                            
-//                        }
-//                        else printf("\n!!!Wrong input.\nPlease check your input.\n");
-//        
-//                        
-//
-//                    } while(1);
                     
                 }
             }
+            
             else printf("\n!!!Wrong input.\nPlease check your input.\n");
         }
+        
     }
     return 0;
 }
