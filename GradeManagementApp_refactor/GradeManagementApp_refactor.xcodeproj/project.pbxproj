@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9E04289A1BA92CB900207E1A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0428991BA92CB900207E1A /* main.m */; };
+		9E0428A21BA92D7600207E1A /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0428A11BA92D7600207E1A /* Application.m */; };
+		9E0428A51BA92E2E00207E1A /* RunLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0428A41BA92E2E00207E1A /* RunLoop.m */; };
+		9E0428A81BA92E4800207E1A /* EventQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0428A71BA92E4800207E1A /* EventQueue.m */; };
+		9E0428AB1BA92E6600207E1A /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0428AA1BA92E6600207E1A /* Event.m */; };
+		9E0428B11BA92F2C00207E1A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0428B01BA92F2C00207E1A /* AppDelegate.m */; };
+		9E0428B51BA9985400207E1A /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0428B41BA9985400207E1A /* Student.m */; };
+		9E0428B81BA9985F00207E1A /* Grade.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0428B71BA9985F00207E1A /* Grade.m */; };
+		9E0428BB1BA9986D00207E1A /* GradeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0428BA1BA9986D00207E1A /* GradeManager.m */; };
+		9E0428BF1BA9988F00207E1A /* Student+GradeSortable.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0428BE1BA9988F00207E1A /* Student+GradeSortable.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9E0428941BA92CB900207E1A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9E0428961BA92CB900207E1A /* GradeManagementApp_refactor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GradeManagementApp_refactor; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E0428991BA92CB900207E1A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9E0428A01BA92D7600207E1A /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		9E0428A11BA92D7600207E1A /* Application.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Application.m; sourceTree = "<group>"; };
+		9E0428A31BA92E2E00207E1A /* RunLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunLoop.h; sourceTree = "<group>"; };
+		9E0428A41BA92E2E00207E1A /* RunLoop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunLoop.m; sourceTree = "<group>"; };
+		9E0428A61BA92E4800207E1A /* EventQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventQueue.h; sourceTree = "<group>"; };
+		9E0428A71BA92E4800207E1A /* EventQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventQueue.m; sourceTree = "<group>"; };
+		9E0428A91BA92E6600207E1A /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		9E0428AA1BA92E6600207E1A /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		9E0428AC1BA92EAB00207E1A /* ApplicationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationDelegate.h; sourceTree = "<group>"; };
+		9E0428AF1BA92F2C00207E1A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9E0428B01BA92F2C00207E1A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9E0428B31BA9985400207E1A /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		9E0428B41BA9985400207E1A /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		9E0428B61BA9985F00207E1A /* Grade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grade.h; sourceTree = "<group>"; };
+		9E0428B71BA9985F00207E1A /* Grade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grade.m; sourceTree = "<group>"; };
+		9E0428B91BA9986D00207E1A /* GradeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradeManager.h; sourceTree = "<group>"; };
+		9E0428BA1BA9986D00207E1A /* GradeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradeManager.m; sourceTree = "<group>"; };
+		9E0428BC1BA9987B00207E1A /* GradeSortable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradeSortable.h; sourceTree = "<group>"; };
+		9E0428BD1BA9988F00207E1A /* Student+GradeSortable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+GradeSortable.h"; sourceTree = "<group>"; };
+		9E0428BE1BA9988F00207E1A /* Student+GradeSortable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+GradeSortable.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9E0428931BA92CB900207E1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9E04288D1BA92CB900207E1A = {
+			isa = PBXGroup;
+			children = (
+				9E0428981BA92CB900207E1A /* GradeManagementApp_refactor */,
+				9E0428971BA92CB900207E1A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9E0428971BA92CB900207E1A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9E0428961BA92CB900207E1A /* GradeManagementApp_refactor */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9E0428981BA92CB900207E1A /* GradeManagementApp_refactor */ = {
+			isa = PBXGroup;
+			children = (
+				9E0428AD1BA92ED700207E1A /* System */,
+				9E0428AE1BA92F0900207E1A /* Application */,
+				9E0428B21BA92F5100207E1A /* Model */,
+			);
+			path = GradeManagementApp_refactor;
+			sourceTree = "<group>";
+		};
+		9E0428AD1BA92ED700207E1A /* System */ = {
+			isa = PBXGroup;
+			children = (
+				9E0428A01BA92D7600207E1A /* Application.h */,
+				9E0428A11BA92D7600207E1A /* Application.m */,
+				9E0428A31BA92E2E00207E1A /* RunLoop.h */,
+				9E0428A41BA92E2E00207E1A /* RunLoop.m */,
+				9E0428A61BA92E4800207E1A /* EventQueue.h */,
+				9E0428A71BA92E4800207E1A /* EventQueue.m */,
+				9E0428A91BA92E6600207E1A /* Event.h */,
+				9E0428AA1BA92E6600207E1A /* Event.m */,
+				9E0428AC1BA92EAB00207E1A /* ApplicationDelegate.h */,
+			);
+			name = System;
+			sourceTree = "<group>";
+		};
+		9E0428AE1BA92F0900207E1A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				9E0428991BA92CB900207E1A /* main.m */,
+				9E0428AF1BA92F2C00207E1A /* AppDelegate.h */,
+				9E0428B01BA92F2C00207E1A /* AppDelegate.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		9E0428B21BA92F5100207E1A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E0428B31BA9985400207E1A /* Student.h */,
+				9E0428B41BA9985400207E1A /* Student.m */,
+				9E0428B61BA9985F00207E1A /* Grade.h */,
+				9E0428B71BA9985F00207E1A /* Grade.m */,
+				9E0428B91BA9986D00207E1A /* GradeManager.h */,
+				9E0428BA1BA9986D00207E1A /* GradeManager.m */,
+				9E0428BC1BA9987B00207E1A /* GradeSortable.h */,
+				9E0428BD1BA9988F00207E1A /* Student+GradeSortable.h */,
+				9E0428BE1BA9988F00207E1A /* Student+GradeSortable.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9E0428951BA92CB900207E1A /* GradeManagementApp_refactor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E04289D1BA92CB900207E1A /* Build configuration list for PBXNativeTarget "GradeManagementApp_refactor" */;
+			buildPhases = (
+				9E0428921BA92CB900207E1A /* Sources */,
+				9E0428931BA92CB900207E1A /* Frameworks */,
+				9E0428941BA92CB900207E1A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GradeManagementApp_refactor;
+			productName = GradeManagementApp_refactor;
+			productReference = 9E0428961BA92CB900207E1A /* GradeManagementApp_refactor */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9E04288E1BA92CB900207E1A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = miyaeyo;
+				TargetAttributes = {
+					9E0428951BA92CB900207E1A = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = 9E0428911BA92CB900207E1A /* Build configuration list for PBXProject "GradeManagementApp_refactor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9E04288D1BA92CB900207E1A;
+			productRefGroup = 9E0428971BA92CB900207E1A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9E0428951BA92CB900207E1A /* GradeManagementApp_refactor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9E0428921BA92CB900207E1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E0428A21BA92D7600207E1A /* Application.m in Sources */,
+				9E0428BF1BA9988F00207E1A /* Student+GradeSortable.m in Sources */,
+				9E0428A51BA92E2E00207E1A /* RunLoop.m in Sources */,
+				9E0428B11BA92F2C00207E1A /* AppDelegate.m in Sources */,
+				9E0428AB1BA92E6600207E1A /* Event.m in Sources */,
+				9E0428B51BA9985400207E1A /* Student.m in Sources */,
+				9E0428B81BA9985F00207E1A /* Grade.m in Sources */,
+				9E0428A81BA92E4800207E1A /* EventQueue.m in Sources */,
+				9E04289A1BA92CB900207E1A /* main.m in Sources */,
+				9E0428BB1BA9986D00207E1A /* GradeManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9E04289B1BA92CB900207E1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9E04289C1BA92CB900207E1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9E04289E1BA92CB900207E1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9E04289F1BA92CB900207E1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9E0428911BA92CB900207E1A /* Build configuration list for PBXProject "GradeManagementApp_refactor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E04289B1BA92CB900207E1A /* Debug */,
+				9E04289C1BA92CB900207E1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E04289D1BA92CB900207E1A /* Build configuration list for PBXNativeTarget "GradeManagementApp_refactor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E04289E1BA92CB900207E1A /* Debug */,
+				9E04289F1BA92CB900207E1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9E04288E1BA92CB900207E1A /* Project object */;
+}
