@@ -54,7 +54,9 @@
     
     accumulator = [[Accumulator alloc] init];
     
+    
     [[self view] setFrame:CGRectMake(coordinateX, coordinateY, 250, 70)];
+    
     
     item = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 70, 60)];
     [item setTextAlignment:NSTextAlignmentRight];
@@ -62,12 +64,14 @@
     [item setTextColor:[UIColor blackColor]];
     [[self view] addSubview:item];
     
+    
     amount = [[UILabel alloc] initWithFrame:CGRectMake(75, 0, 60, 60)];
     [amount setTextAlignment:NSTextAlignmentCenter];
     [amount setText:@"0"];
     [amount setTextColor:[UIColor brownColor]];
     [amount setBackgroundColor:[UIColor whiteColor]];
     [[self view] addSubview:amount];
+    
     
     button = [UIButton buttonWithType:UIButtonTypeSystem];
     [button setFrame:CGRectMake(140, 0, 60, 60)];
@@ -77,6 +81,7 @@
                action:@selector(plusButtonTapped:)
      forControlEvents:UIControlEventTouchUpInside];
     [[self view] addSubview:button];
+    
     
     button = [UIButton buttonWithType:UIButtonTypeSystem];
     [button setFrame:CGRectMake(205, 0, 60, 60)];

@@ -38,28 +38,32 @@
     childViewController1 = [ItemAmountController controllerWithItemName:@"jean"
                                                             coordinateX:10
                                                             coordinateY:100];
-    [self addChildViewController:childViewController1];
-    [[self view] addSubview:[childViewController1 view]];
+    [self setContentController:childViewController1];
+    
     
     childViewController2 = [ItemAmountController controllerWithItemName:@"shirt"
                                                             coordinateX:10
                                                             coordinateY:170];
-    [self addChildViewController:childViewController2];
-    [[self view] addSubview:[childViewController2 view]];
+    [self setContentController:childViewController2];
+
 
     
     childViewController3 = [ItemAmountController controllerWithItemName:@"cap"
                                                             coordinateX:10
                                                             coordinateY:240];
-    [self addChildViewController:childViewController3];    
-    [[self view] addSubview:[childViewController3 view]];
-    
+    [self setContentController:childViewController3];
     
     
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)setContentController:(id)contentController
+{
+    [self addChildViewController:contentController];
+    [[self view] addSubview:[contentController view]];
 }
 
 
