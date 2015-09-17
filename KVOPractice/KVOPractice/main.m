@@ -23,9 +23,11 @@ int main(int argc, const char * argv[]) {
                    context:NULL];
         
         [minky setHunger:43];
-        [minky changeHunger:25]; //me 에서 detection못함
         
-        NSLog(@"%d", [minky hunger]);
+        [minky willChangeValueForKey:@"hunger"];
+        [minky changeHunger:25]; //이것만 쓰면 me 에서 detection못함
+        [minky didChangeValueForKey:@"hunger"];
+        
         
         [minky removeObserver:me forKeyPath:@"hunger"];
         
