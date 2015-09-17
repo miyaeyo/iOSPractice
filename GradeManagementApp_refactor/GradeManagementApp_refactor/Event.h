@@ -11,7 +11,7 @@
 @interface Event : NSObject
 
 @property (nonatomic, readonly) NSString *key;
-@property (nonatomic, readonly) id      value;
+@property (nonatomic, readonly) id value;
 
 + (instancetype)eventWithKey:(NSString *)key value:(id)value;
 

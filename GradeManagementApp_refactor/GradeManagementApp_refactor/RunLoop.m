@@ -43,7 +43,6 @@
             char input[10];
             printf("\ninput: ");
             scanf("%s", input);
-            rewind(stdin);
             NSString *eventKey = [NSString stringWithUTF8String:input];
             
             mEvent = [Event eventWithKey:eventKey value:nil];
@@ -54,11 +53,8 @@
                 [[[Application sharedApplication] appDelegate] applicationWillTerminate];
                 break;
             }
-            else
-            {
-                [[Application sharedApplication] delegateEvent:[mEventQueue deEventQueue]];
-            }
-            
+           
+            [[Application sharedApplication] delegateEvent:[mEventQueue deEventQueue]];
  
         }
     }
@@ -67,7 +63,6 @@
 
 - (void)dealloc
 {
-    [mEventQueue removeObserver:self forKeyPath:@"count"];
     [mEventQueue release];
     [mEvent release];
     

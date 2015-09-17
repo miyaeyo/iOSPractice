@@ -11,7 +11,7 @@
 @implementation Student
 {
     NSString *mName;
-    Grade   *mGrade;
+    Grade *mGrade;
 }
 
 

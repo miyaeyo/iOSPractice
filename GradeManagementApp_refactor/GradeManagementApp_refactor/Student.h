@@ -12,7 +12,7 @@
 @interface Student : NSObject
 
 @property (nonatomic, readonly) NSString *name;
-@property (nonatomic, readonly) Grade   *grade;
+@property (nonatomic, readonly) Grade *grade;
 
 
 + (instancetype)studentWithName:(NSString *)name grade:(Grade *)grade;

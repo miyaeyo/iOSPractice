@@ -62,10 +62,13 @@
         printf("[sorting mode: ascending order to [korean, english, math, GPA] score]\n");
         printf("input sorting option (korean, english, math, GPA): ");
         scanf("%s", sortingOption);
-        rewind(stdin);
         
         [tableOfStudent release];
         tableOfStudent = [[gradeManager gradeSortBy:[NSString stringWithUTF8String:sortingOption]] retain];
+    }
+    else
+    {
+        printf("wrong input.\n");
     }
 }
 

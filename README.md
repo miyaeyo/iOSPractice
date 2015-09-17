@@ -7,9 +7,13 @@
         - OOP
         - Foundation Framework (Collections, KVC, KVO)
 
-    * GradeManagementApp
+    * GradeManagementApp_refactor
         - Application structure(event -> event queue -> run loop -> application delegate)
         - with GradeManagementSystem
 
     * KVOPractice
         - key-value observer example
+
+2. ios practice
+    * Practice_1
+        - MVC pattern(Container Controller: ViewController, Content Controller: ItemAmountController)
