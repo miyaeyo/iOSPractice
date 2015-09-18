@@ -21,7 +21,6 @@
     ItemAmountController *childViewController2;
     ItemAmountController *childViewController3;
     
-    UILabel *title;
 }
 
 - (void)viewDidLoad {
@@ -29,7 +28,7 @@
     [[self view] setBackgroundColor:[UIColor yellowColor]];
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
-    title = [[UILabel alloc]initWithFrame:CGRectMake(0, 50, screenRect.size.width, 40)];
+    UILabel *title = [[[UILabel alloc]initWithFrame:CGRectMake(0, 50, screenRect.size.width, 40)] autorelease];
     [title setTextAlignment:NSTextAlignmentCenter];
     [title setText:@"* Shopping cart *"];
     [[self view] addSubview:title];
