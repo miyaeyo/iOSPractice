@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyView : UIResponder
+
+@interface MyView : UIView
+
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MyView.h"
 
 @interface ViewController ()
 
@@ -16,12 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+
+    MyView *view = [[MyView alloc]initWithFrame:CGRectMake(0, 50, screenRect.size.width, screenRect.size.height-50)];
+    [[self view] addSubview:view];
+   
+    
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
