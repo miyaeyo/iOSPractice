@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "MyView.h"
+#import "DrawingView.h"
 
 @interface ViewController ()
 
@@ -19,8 +19,14 @@
     [super viewDidLoad];
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
-
-    MyView *view = [[MyView alloc]initWithFrame:CGRectMake(0, 50, screenRect.size.width, screenRect.size.height-50)];
+    UILabel *appTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, screenRect.size.width, 50)];
+    [appTitle setTextAlignment:NSTextAlignmentCenter];
+    [appTitle setText:@"DoingDrawingDoing"];
+    [appTitle setFont:[UIFont boldSystemFontOfSize:20]];
+    [appTitle setTextColor:[UIColor colorWithRed:0.49 green:0.36 blue:0.34 alpha:1]];
+    [[self view] addSubview:appTitle];
+    
+    DrawingView *view = [[DrawingView alloc]initWithFrame:CGRectMake(0, 70, screenRect.size.width, screenRect.size.height-120)];
     [[self view] addSubview:view];
    
     

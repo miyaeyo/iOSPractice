@@ -6,10 +6,10 @@
 //  Copyright (c) 2015년 miyaeyo. All rights reserved.
 //
 
-#import "MyView.h"
+#import "DrawingView.h"
 #import "Line.h"
 
-@implementation MyView
+@implementation DrawingView
 {
     NSMutableArray *lines;
     CGPoint lastPoint;
@@ -71,9 +71,12 @@
     [super drawRect:rect];
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    CGContextSetRGBStrokeColor(context, 0.98, 0.67, 0.39, 1);
+    CGContextSetRGBStrokeColor(context, 0.68, 0.8, 0.78, 1);
+    //CGColorCreateGenericRGB(0.68, 0.8, 0.78, 1)
     CGContextStrokeRectWithWidth(context, rect, 10);
+    CGContextSetRGBStrokeColor(context, 0.98, 0.67, 0.39, 1);
     CGContextSetLineWidth(context, 5);
+    CGContextSetLineCap(context, kCGLineCapRound);
 
     CGContextBeginPath(context);
     for (Line *line in lines) {
