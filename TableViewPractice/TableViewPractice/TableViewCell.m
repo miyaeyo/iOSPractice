@@ -55,8 +55,11 @@
 
 - (void)layoutSubviews
 {
-    [mRank setFrame:CGRectMake(10, 8, 50, 50)];
+    [super layoutSubviews];
+    
+    [mRank setFrame:CGRectMake(10, 15, 50, 50)];
     [mRank setTextAlignment:NSTextAlignmentCenter];
+    [mRank setBackgroundColor:[UIColor grayColor]];
     [self addSubview:mRank];
     
     [mThumbnail setFrame:CGRectMake(70, 8, 60, 60)];

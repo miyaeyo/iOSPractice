@@ -33,6 +33,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    [self setEdgesForExtendedLayout:UIRectEdgeNone];
+    
     [[self tableView] setRowHeight:80];
     [[self tableView] registerClass:[TableViewCell class] forCellReuseIdentifier:@"default cell"];
     
@@ -70,6 +73,7 @@
     
     [super dealloc];
 }
+
 
 /*
 // Override to support conditional editing of the table view.
