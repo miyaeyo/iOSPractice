@@ -17,3 +17,9 @@
 2. ios practice
     * Practice_1
         - MVC pattern(Container Controller: ViewController, Content Controller: ItemAmountController)
+
+    * TableViewPractice
+        - UITableViewController & UITableViewCell
+
+    * UIResponderPractice
+        - CGContext, UITouch, Quartz2D
