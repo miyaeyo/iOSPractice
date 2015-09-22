@@ -11,9 +11,13 @@
 
 @implementation DrawingView
 {
-    NSMutableArray *lines;
+    NSMutableArray *mLines;
     CGPoint lastPoint;
 }
+
+
+@synthesize lines = mLines;
+
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -21,7 +25,7 @@
     
     if (self)
     {
-        lines = [[NSMutableArray alloc] init];
+        mLines = [[NSMutableArray alloc] init];
         [self setBackgroundColor:[UIColor whiteColor]];
     }
     
@@ -45,7 +49,7 @@
     [super touchesMoved:touches withEvent:event];
 
     CGPoint newPoint = [[touches anyObject] locationInView:self];
-    [lines addObject:[Line lineWithStartPoint:lastPoint endPoint:newPoint]];
+    [mLines addObject:[Line lineWithStartPoint:lastPoint endPoint:newPoint]];
     lastPoint = newPoint;
     
     [self setNeedsDisplay];
@@ -71,15 +75,14 @@
     [super drawRect:rect];
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    CGContextSetRGBStrokeColor(context, 0.68, 0.8, 0.78, 1);
-    //CGColorCreateGenericRGB(0.68, 0.8, 0.78, 1)
+    CGContextSetRGBStrokeColor(context, 0.57, 0.31, 0.25, 1);
     CGContextStrokeRectWithWidth(context, rect, 10);
-    CGContextSetRGBStrokeColor(context, 0.98, 0.67, 0.39, 1);
+    CGContextSetRGBStrokeColor(context, 0.38, 0.51, 0.43, 1);
     CGContextSetLineWidth(context, 5);
     CGContextSetLineCap(context, kCGLineCapRound);
 
     CGContextBeginPath(context);
-    for (Line *line in lines) {
+    for (Line *line in mLines) {
         CGContextMoveToPoint(context, line.start.x, line.start.y);
         CGContextAddLineToPoint(context, line.end.x, line.end.y);
     }
@@ -87,9 +90,24 @@
 
 }
 
+- (void)clearDrawingView
+{
+    [mLines removeAllObjects];
+    
+    [self setNeedsDisplay];
+}
+
+- (void)replayDrawingLines:(NSArray *)lines
+{
+    mLines = [NSMutableArray arrayWithArray:lines];
+    
+    [self setNeedsDisplay];
+    
+}
+
 - (void)dealloc
 {
-    [lines release];
+    [mLines release];
     
     [super dealloc];
 }

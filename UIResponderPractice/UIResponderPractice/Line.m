@@ -14,13 +14,16 @@
     CGPoint mEnd;
 }
 
+
 @synthesize start = mStart;
 @synthesize end = mEnd;
+
 
 + (instancetype)lineWithStartPoint:(CGPoint)start endPoint:(CGPoint)end
 {
     return [[self alloc] initWithStartPoint:start endPoint:end];
 }
+
 
 - (instancetype)initWithStartPoint:(CGPoint)start endPoint:(CGPoint)end
 {

@@ -11,8 +11,10 @@
 
 @interface Line : NSObject
 
+
 @property (nonatomic, readonly) CGPoint start;
 @property (nonatomic, readonly) CGPoint end;
+
 
 + (instancetype)lineWithStartPoint:(CGPoint)start endPoint:(CGPoint)end;
 

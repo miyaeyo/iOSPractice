@@ -27,8 +27,9 @@
     
     
     ViewController *viewController = [[[ViewController alloc] init] autorelease];
-    [[self window] setBackgroundColor:[UIColor whiteColor]];
+    [[self window] setBackgroundColor:[UIColor colorWithRed:0.97 green:0.87 blue:0.83 alpha:1]];
     [[self window] setRootViewController:viewController];
+    
     return YES;
 }
 

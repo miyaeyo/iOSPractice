@@ -16,7 +16,6 @@
 		9E3F245E1BAFA5A8006FCD23 /* UIResponderPracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3F245D1BAFA5A8006FCD23 /* UIResponderPracticeTests.m */; };
 		9E3F246C1BAFA86D006FCD23 /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3F246B1BAFA86D006FCD23 /* DrawingView.m */; };
 		9EED89711BB01CCE000E3065 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EED89701BB01CCE000E3065 /* Line.m */; };
-		9EED89741BB07157000E3065 /* menuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EED89731BB07157000E3065 /* menuController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +46,6 @@
 		9E3F246B1BAFA86D006FCD23 /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
 		9EED896F1BB01CCE000E3065 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
 		9EED89701BB01CCE000E3065 /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
-		9EED89721BB07157000E3065 /* menuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menuController.h; sourceTree = "<group>"; };
-		9EED89731BB07157000E3065 /* menuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = menuController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +91,6 @@
 				9E3F24461BAFA5A8006FCD23 /* AppDelegate.m */,
 				9E3F24481BAFA5A8006FCD23 /* ViewController.h */,
 				9E3F24491BAFA5A8006FCD23 /* ViewController.m */,
-				9EED89721BB07157000E3065 /* menuController.h */,
-				9EED89731BB07157000E3065 /* menuController.m */,
 				9E3F246A1BAFA86D006FCD23 /* DrawingView.h */,
 				9E3F246B1BAFA86D006FCD23 /* DrawingView.m */,
 				9EED896F1BB01CCE000E3065 /* Line.h */,
@@ -234,7 +229,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EED89741BB07157000E3065 /* menuController.m in Sources */,
 				9EED89711BB01CCE000E3065 /* Line.m in Sources */,
 				9E3F246C1BAFA86D006FCD23 /* DrawingView.m in Sources */,
 				9E3F244A1BAFA5A8006FCD23 /* ViewController.m in Sources */,
