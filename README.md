@@ -17,6 +17,7 @@
 2. ios practice
     * Practice_1
         - MVC pattern(Container Controller: ViewController, Content Controller: ItemAmountController)
+        - UILable, UIButton
 
     * TableViewPractice
         - UITableViewController & UITableViewCell
