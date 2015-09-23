@@ -11,10 +11,10 @@
 
 @interface DrawingView : UIView
 
-@property (nonatomic, readonly) NSMutableArray *lines;
+- (NSArray *)lines;
+- (void)clear;
+- (void)replayWithLines:(NSArray *)lines;
+- (void)changeColor;
 
-- (void)clearDrawingView;
-
-- (void)replayDrawingLines:(NSArray *)lines;
 
 @end

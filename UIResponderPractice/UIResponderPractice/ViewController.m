@@ -9,126 +9,143 @@
 #import "ViewController.h"
 #import "DrawingView.h"
 #import "Line.h"
-
-
-@interface ViewController ()
-
-@end
+#import "Recorder.h"
+#import "UIButton+MyButton.h"
 
 
 @implementation ViewController
 {
-    UILabel *appTitle;
+    UILabel *titleLabel;
     DrawingView *drawingView;
-    UIButton *draw;
-    UIButton *complete;
-    UIButton *replay;
+    UIButton *drawButton;
+    UIButton *changeColorButton;
+    UIButton *replayButton;
     
-    CGFloat screenWidth;
-    CGFloat screenHeight;
-    
-    NSArray *lines;
-    
+    Recorder *recorder;
 }
 
 
-- (void)viewDidLoad {
+#pragma mark - init/dealloc
+
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
+    if (self)
+    {
+        recorder = [[Recorder alloc] init];
+    }
+    
+    return self;
+}
+
+
+- (void)dealloc
+{
+    [recorder release];
+
+    [super dealloc];
+}
+
+
+#pragma mark - viewController
+
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    screenWidth = screenRect.size.width;
-    screenHeight = screenRect.size.height;
-    
-    
-    appTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, screenWidth, 50)];
-    [self appTitleSetting];
-    
-    draw = [UIButton buttonWithType:UIButtonTypeSystem];
-    complete = [UIButton buttonWithType:UIButtonTypeSystem];
-    replay = [UIButton buttonWithType:UIButtonTypeSystem];
-    [self menuButtonSetting];
+    [self setupTitleLabel];
+    [self setupDrawingView];
+    [self setupButtons];
 }
 
 
-- (void)appTitleSetting
+- (void)didReceiveMemoryWarning
 {
-    [appTitle setTextAlignment:NSTextAlignmentCenter];
-    [appTitle setText:@"DoingDrawingDoing"];
-    [appTitle setFont:[UIFont boldSystemFontOfSize:20]];
-    [appTitle setTextColor:[UIColor colorWithRed:0.15 green:0.22 blue:0.16 alpha:1]];
-    [[self view] addSubview:appTitle];
-
-}
-
-- (void)menuButtonSetting
-{
-    [draw setFrame:CGRectMake(0, screenHeight-50, screenWidth/3, 50)];
-    [draw setTitle:@"DRAW" forState:UIControlStateNormal];
-    [draw setTitleColor:[UIColor colorWithRed:0.57 green:0.31 blue:0.25 alpha:1]
-               forState:UIControlStateNormal];
-    [draw setBackgroundColor:[UIColor colorWithRed:0.8 green:0.85 blue:0.64 alpha:1]];
-    [draw addTarget:self
-             action:@selector(drawButtonTapped)
-   forControlEvents:UIControlEventTouchUpInside];
-    [[self view] addSubview:draw];
-
+    [super didReceiveMemoryWarning];
     
-    [complete setFrame:CGRectMake(screenWidth/3, screenHeight-50, screenWidth/3, 50)];
-    [complete setTitle:@"COMPLETE" forState:UIControlStateNormal];
-    [complete setTitleColor:[UIColor colorWithRed:0.57 green:0.31 blue:0.25 alpha:1]
-               forState:UIControlStateNormal];
-    [complete setBackgroundColor:[UIColor colorWithRed:0.8 green:0.85 blue:0.64 alpha:1]];
-    [complete addTarget:self
-                 action:@selector(completeButtonTapped)
-       forControlEvents:UIControlEventTouchUpInside];
-    [[self view] addSubview:complete];
-    
-    
-    [replay setFrame:CGRectMake(screenWidth*2/3, screenHeight-50, screenWidth/3, 50)];
-    [replay setTitle:@"REPLAY" forState:UIControlStateNormal];
-    [replay setTitleColor:[UIColor colorWithRed:0.57 green:0.31 blue:0.25 alpha:1]
-               forState:UIControlStateNormal];
-    [replay setBackgroundColor:[UIColor colorWithRed:0.8 green:0.85 blue:0.64 alpha:1]];
-    [replay addTarget:self
-               action:@selector(replayButtonTapped)
-     forControlEvents:UIControlEventTouchUpInside];
-    [[self view] addSubview:replay];
+    if ([self isViewLoaded] && [self.view window] == nil) {
+        titleLabel = nil;
+        drawingView = nil;
+        drawButton = nil;
+        changeColorButton = nil;
+        replayButton = nil;
+    }
 }
 
 
-- (void)drawButtonTapped
+#pragma mark - actions
+
+
+- (IBAction)drawButtonTapped:(id)sender
 {
-    drawingView = [[DrawingView alloc] initWithFrame:CGRectMake(0, 70, screenWidth, screenHeight-120)];
+    [drawingView clear];
+}
+
+
+- (IBAction)changeColorButtonTapped:(id)sender
+{
+    [drawingView changeColor];
+}
+
+
+- (IBAction)replayButtonTapped:(id)sender
+{
+    [recorder setLines:[drawingView lines]];
+    [drawingView replayWithLines:[recorder lines]];
+}
+
+
+#pragma mark - private
+
+
+- (void)setupTitleLabel
+{
+    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    
+    titleLabel = [[[UILabel alloc] initWithFrame:CGRectMake(0, 20, screenSize.width, 50)] autorelease];
+    [titleLabel setTextAlignment:NSTextAlignmentCenter];
+    [titleLabel setText:@"DoingDrawingDoing"];
+    [titleLabel setFont:[UIFont boldSystemFontOfSize:20]];
+    [titleLabel setTextColor:[UIColor colorWithRed:0.15 green:0.22 blue:0.16 alpha:1]];
+    [[self view] addSubview:titleLabel];
+    
+}
+
+
+- (void)setupDrawingView
+{
+    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    
+    drawingView = [[[DrawingView alloc] initWithFrame:CGRectMake(0, 70, screenSize.width, screenSize.height - 120)] autorelease];
     [[self view] addSubview:drawingView];
 }
 
 
-- (void)completeButtonTapped
+- (void)setupButtons
 {
-    lines = [[NSArray arrayWithArray:[drawingView lines]] retain];
-    [drawingView clearDrawingView];
-
+    drawButton = [UIButton myButtonWithTitle:@"DRAW" target:self action:@selector(drawButtonTapped:)];
+    changeColorButton = [UIButton myButtonWithTitle:@"COLOR" target:self action:@selector(changeColorButtonTapped:)];
+    replayButton = [UIButton myButtonWithTitle:@"REPLAY" target:self action:@selector(replayButtonTapped:)];
+    
+    [self setupButtonLayout];
 }
 
 
-- (void)replayButtonTapped
+- (void)setupButtonLayout
 {
-    [drawingView replayDrawingLines:lines];
-    [lines release];
-    
-}
+    CGSize size = [[UIScreen mainScreen] bounds].size;
+    NSArray *buttons = @[drawButton, changeColorButton, replayButton];
 
-
-- (void)didReceiveMemoryWarning {
-    
-    if ([self isViewLoaded] && [self.view window] == nil) {
-        [appTitle release];
-        [drawingView release];
-        self.view = nil;
+    for (NSInteger i = 0; i < [buttons count]; i++)
+    {
+        UIButton *button = [buttons objectAtIndex:i];
+        [button setFrame:CGRectMake(size.width * i / [buttons count], size.height - 50, size.width / [buttons count], 50)];
+        [[self view] addSubview:button];
     }
-    
-    [super didReceiveMemoryWarning];
-    
 }
+
 
 @end

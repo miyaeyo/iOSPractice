@@ -7,16 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyPoint.h"
 
 
 @interface Line : NSObject
 
 
-@property (nonatomic, readonly) CGPoint start;
-@property (nonatomic, readonly) CGPoint end;
+@property (nonatomic, readonly) MyPoint *start;
+@property (nonatomic, readonly) MyPoint *end;
 
 
-+ (instancetype)lineWithStartPoint:(CGPoint)start endPoint:(CGPoint)end;
++ (instancetype)lineWithStartPoint:(MyPoint *)start endPoint:(MyPoint *)end;
 
 
 @end

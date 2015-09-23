@@ -10,8 +10,8 @@
 
 @implementation Line
 {
-    CGPoint mStart;
-    CGPoint mEnd;
+    MyPoint *mStart;
+    MyPoint *mEnd;
 }
 
 
@@ -19,13 +19,13 @@
 @synthesize end = mEnd;
 
 
-+ (instancetype)lineWithStartPoint:(CGPoint)start endPoint:(CGPoint)end
++ (instancetype)lineWithStartPoint:(MyPoint *)start endPoint:(MyPoint *)end
 {
-    return [[self alloc] initWithStartPoint:start endPoint:end];
+    return [[[self alloc] initWithStartPoint:start endPoint:end] autorelease];
 }
 
 
-- (instancetype)initWithStartPoint:(CGPoint)start endPoint:(CGPoint)end
+- (instancetype)initWithStartPoint:(MyPoint *)start endPoint:(MyPoint *)end
 {
     self = [super init];
     
@@ -37,9 +37,6 @@
     
     return self;
 }
-
-
-
 
 
 @end

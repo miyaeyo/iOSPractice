@@ -16,6 +16,10 @@
 		9E3F245E1BAFA5A8006FCD23 /* UIResponderPracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3F245D1BAFA5A8006FCD23 /* UIResponderPracticeTests.m */; };
 		9E3F246C1BAFA86D006FCD23 /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3F246B1BAFA86D006FCD23 /* DrawingView.m */; };
 		9EED89711BB01CCE000E3065 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EED89701BB01CCE000E3065 /* Line.m */; };
+		9EED897A1BB1226E000E3065 /* MyPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EED89791BB1226E000E3065 /* MyPoint.m */; };
+		9EED897D1BB141E7000E3065 /* Recorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EED897C1BB141E7000E3065 /* Recorder.m */; };
+		9EED89801BB14794000E3065 /* UIButton+MyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EED897F1BB14794000E3065 /* UIButton+MyButton.m */; };
+		9EED89831BB1CAE5000E3065 /* MyColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EED89821BB1CAE5000E3065 /* MyColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,14 @@
 		9E3F246B1BAFA86D006FCD23 /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
 		9EED896F1BB01CCE000E3065 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
 		9EED89701BB01CCE000E3065 /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
+		9EED89781BB1226E000E3065 /* MyPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPoint.h; sourceTree = "<group>"; };
+		9EED89791BB1226E000E3065 /* MyPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPoint.m; sourceTree = "<group>"; };
+		9EED897B1BB141E7000E3065 /* Recorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recorder.h; sourceTree = "<group>"; };
+		9EED897C1BB141E7000E3065 /* Recorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recorder.m; sourceTree = "<group>"; };
+		9EED897E1BB14794000E3065 /* UIButton+MyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+MyButton.h"; sourceTree = "<group>"; };
+		9EED897F1BB14794000E3065 /* UIButton+MyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+MyButton.m"; sourceTree = "<group>"; };
+		9EED89811BB1CAE5000E3065 /* MyColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyColor.h; sourceTree = "<group>"; };
+		9EED89821BB1CAE5000E3065 /* MyColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyColor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +105,16 @@
 				9E3F24491BAFA5A8006FCD23 /* ViewController.m */,
 				9E3F246A1BAFA86D006FCD23 /* DrawingView.h */,
 				9E3F246B1BAFA86D006FCD23 /* DrawingView.m */,
+				9EED89811BB1CAE5000E3065 /* MyColor.h */,
+				9EED89821BB1CAE5000E3065 /* MyColor.m */,
+				9EED89781BB1226E000E3065 /* MyPoint.h */,
+				9EED89791BB1226E000E3065 /* MyPoint.m */,
 				9EED896F1BB01CCE000E3065 /* Line.h */,
 				9EED89701BB01CCE000E3065 /* Line.m */,
+				9EED897B1BB141E7000E3065 /* Recorder.h */,
+				9EED897C1BB141E7000E3065 /* Recorder.m */,
+				9EED897E1BB14794000E3065 /* UIButton+MyButton.h */,
+				9EED897F1BB14794000E3065 /* UIButton+MyButton.m */,
 				9E3F244B1BAFA5A8006FCD23 /* Main.storyboard */,
 				9E3F244E1BAFA5A8006FCD23 /* Images.xcassets */,
 				9E3F24501BAFA5A8006FCD23 /* LaunchScreen.xib */,
@@ -229,11 +249,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EED89831BB1CAE5000E3065 /* MyColor.m in Sources */,
+				9EED897A1BB1226E000E3065 /* MyPoint.m in Sources */,
 				9EED89711BB01CCE000E3065 /* Line.m in Sources */,
 				9E3F246C1BAFA86D006FCD23 /* DrawingView.m in Sources */,
 				9E3F244A1BAFA5A8006FCD23 /* ViewController.m in Sources */,
 				9E3F24471BAFA5A8006FCD23 /* AppDelegate.m in Sources */,
+				9EED89801BB14794000E3065 /* UIButton+MyButton.m in Sources */,
 				9E3F24441BAFA5A8006FCD23 /* main.m in Sources */,
+				9EED897D1BB141E7000E3065 /* Recorder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
