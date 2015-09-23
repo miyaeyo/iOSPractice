@@ -22,6 +22,6 @@
     * TableViewPractice
         - UITableViewController & UITableViewCell
 
-    * UIResponderPractice
+    * UIResponderPractice -> refactoring....ing... -> DrawingApp
         - CGContext, UITouch, Quartz2D
         - drawing application

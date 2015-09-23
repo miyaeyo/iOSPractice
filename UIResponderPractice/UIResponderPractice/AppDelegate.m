@@ -15,8 +15,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    NSLog(@"launch");
-
     
     UIWindow *window  = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen]bounds]] autorelease];
     [window makeKeyAndVisible];
