@@ -17,6 +17,7 @@
 - (void)draw;
 - (void)replay;
 - (void)changeColor;
-- (void)storePoint:(MyPoint *)point;
+- (void)storePoint:(MyPoint *)point isEdge:(BOOL)edge;
+- (NSArray *)takeOutLines;
 
 @end

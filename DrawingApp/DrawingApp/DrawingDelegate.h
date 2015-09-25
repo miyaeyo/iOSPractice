@@ -10,14 +10,17 @@
 #define DrawingApp_EventDelegate_h
 
 #import "MyPoint.h"
+#import "MyColor.h"
 
 @protocol DrawingDelegate <NSObject>
 
+
 @required
 
-- (void)didStartDrawingWithPoint:(MyPoint *)point;
-- (void)DrawingWithline:(NSArray *)line;
-- (void)didDrawingEnd;
+- (void)didStartDrawing:(MyPoint *)point;
+- (void)drawingWithPoint:(MyPoint *)point;
+- (void)didChangeColor;
+- (void)didReplayWithline:(NSArray *)line;
 
 
 @end

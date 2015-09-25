@@ -13,7 +13,11 @@
 
 @property (nonatomic, weak) id <DrawingDelegate> delegate;
 
+
 - (void)didChangePoint;
+- (void)setLine:(NSArray *)lines;
+- (void)changeColor;
+
 
 
 @end

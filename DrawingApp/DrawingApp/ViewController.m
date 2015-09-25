@@ -32,6 +32,11 @@
     
     if (self)
     {
+        [[self view] setBackgroundColor:[UIColor colorWithRed:0.97
+                                                        green:0.87
+                                                         blue:0.83
+                                                        alpha:1]];
+
         mRecoder = [[Recoder alloc] init];
         [mRecoder setDelegate:self];
     }
@@ -64,7 +69,7 @@
         mDrawButton = nil;
         mColorButton = nil;
         mReplayButton = nil;
-        // mRecoder release는 여기서 불리는가???
+        // mRecoder release는 ARC로 설정해두면 여기서 불리는가???
     }
     
 }
@@ -73,17 +78,29 @@
 #pragma mark - DrawingDelegate
 
 
-- (void)didStartDrawingWithPoint:(MyPoint *)point
+- (void)didStartDrawing:(MyPoint *)point
 {
-    [mRecoder storePoint:point];
+    [mRecoder storePoint:point isEdge:YES];
 }
-- (void)DrawingWithline:(NSArray *)line
+
+
+- (void)drawingWithPoint:(MyPoint *)point
+{
+    [mRecoder storePoint:point isEdge:NO];
+    [mDrawingView setLine:[mRecoder takeOutLines]];
+    [mDrawingView didChangePoint];
+}
+
+
+- (void)didReplayWithline:(NSArray *)line
 {
     
 }
-- (void)didDrawingEnd
+
+
+- (void)didChangeColor
 {
-    
+    [mDrawingView changeColor];
 }
 
 
@@ -93,6 +110,7 @@
 - (IBAction)drawButtonTapped:(id)sender
 {
     [mRecoder draw];
+    [mDrawingView didChangePoint];
 }
 
 

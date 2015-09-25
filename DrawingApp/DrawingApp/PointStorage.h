@@ -11,7 +11,9 @@
 
 @interface PointStorage : NSObject
 
-- (NSArray *)line;
-- (void)makeLine:(MyPoint *)point;
+- (NSArray *)lines;
+- (void)storeEdgePoint:(MyPoint *)point;
+- (void)storeInLinePoint:(MyPoint *)point;
+- (void)clearLines;
 
 @end

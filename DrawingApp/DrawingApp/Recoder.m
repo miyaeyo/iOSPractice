@@ -41,22 +41,40 @@
 
 - (void)draw
 {
-    
+    [mStorage clearLines];
 }
 
 
 - (void)replay
 {
+    [mDelegate didReplayWithline:[self takeOutLines]];
 }
 
 
 - (void)changeColor
 {
+    [mDelegate didChangeColor];
+
 }
 
 
-- (void)storePoint:(MyPoint *)point
+- (void)storePoint:(MyPoint *)point isEdge:(BOOL)edge
 {
+    if (edge)
+    {
+        [mStorage storeEdgePoint:point];
+    }
+    else
+    {
+        [mStorage storeInLinePoint:point];
+    }
+    
+    
+}
+
+- (NSArray *)takeOutLines
+{
+    return [mStorage lines];
 }
 
 

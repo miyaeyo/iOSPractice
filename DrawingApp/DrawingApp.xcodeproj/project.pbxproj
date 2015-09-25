@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E3131A31BB3FBE3004BEB0B /* MyLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3131A21BB3FBE3004BEB0B /* MyLine.m */; };
 		9EED89931BB24464000E3065 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EED89921BB24464000E3065 /* main.m */; };
 		9EED89961BB24464000E3065 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EED89951BB24464000E3065 /* AppDelegate.m */; };
 		9EED89991BB24464000E3065 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EED89981BB24464000E3065 /* ViewController.m */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E3131A11BB3FBE3004BEB0B /* MyLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLine.h; sourceTree = "<group>"; };
+		9E3131A21BB3FBE3004BEB0B /* MyLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLine.m; sourceTree = "<group>"; };
 		9EED898D1BB24464000E3065 /* DrawingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EED89911BB24464000E3065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EED89921BB24464000E3065 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 				9EED89C01BB266EF000E3065 /* Recoder.m */,
 				9EED89C21BB2692A000E3065 /* MyPoint.h */,
 				9EED89C31BB2692A000E3065 /* MyPoint.m */,
+				9E3131A11BB3FBE3004BEB0B /* MyLine.h */,
+				9E3131A21BB3FBE3004BEB0B /* MyLine.m */,
 				9EED89C51BB26C74000E3065 /* MyColor.h */,
 				9EED89C61BB26C74000E3065 /* MyColor.m */,
 				9EED89C81BB26DF6000E3065 /* PointStorage.h */,
@@ -284,6 +289,7 @@
 				9EED89CD1BB27B6A000E3065 /* UIButton+MyButton.m in Sources */,
 				9EED89931BB24464000E3065 /* main.m in Sources */,
 				9EED89B81BB24882000E3065 /* DrawingView.m in Sources */,
+				9E3131A31BB3FBE3004BEB0B /* MyLine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +486,7 @@
 				9EED89B21BB24464000E3065 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9EED89B31BB24464000E3065 /* Build configuration list for PBXNativeTarget "DrawingAppTests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +495,7 @@
 				9EED89B51BB24464000E3065 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
