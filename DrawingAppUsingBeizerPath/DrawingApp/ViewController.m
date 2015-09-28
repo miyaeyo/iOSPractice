@@ -2,7 +2,7 @@
 //  ViewController.m
 //  DrawingApp
 //
-//  Created by miyaeyo on 2015. 9. 23..
+//  Created by miyaeyo on 2015. 9. 28..
 //  Copyright (c) 2015년 miyaeyo. All rights reserved.
 //
 
