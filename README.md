@@ -22,6 +22,8 @@
     * TableViewPractice
         - UITableViewController & UITableViewCell
 
-    * UIResponderPractice -> refactoring....ing... -> DrawingApp
+    * UIResponderPractice -> refactoring....ing... -> DrawingApp -> DrawingAppUsingBezierPath
         - CGContext, UITouch, Quartz2D
         - drawing application
+        - DrawingApp: using custom MyLine object to draw path -> replay not work....
+        - DrawingAppUsingBezierPath: using BezierPath to draw path
