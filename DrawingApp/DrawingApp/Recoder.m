@@ -8,6 +8,7 @@
 
 #import "Recoder.h"
 #import "PointStorage.h"
+#import "MyLine.h"
 
 @implementation Recoder
 {
@@ -39,22 +40,9 @@
 
 #pragma mark - public
 
-- (void)draw
+- (void)clear
 {
     [mStorage clearLines];
-}
-
-
-- (void)replay
-{
-    [mDelegate didReplayWithline:[self takeOutLines]];
-}
-
-
-- (void)changeColor
-{
-    [mDelegate didChangeColor];
-
 }
 
 

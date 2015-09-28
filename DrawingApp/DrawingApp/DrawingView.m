@@ -74,10 +74,8 @@
     [super drawRect:rect];
     
     CGContextRef context = UIGraphicsGetCurrentContext();
-    
     [self setupContext:context inRect:rect];
     [self drawInContext:context];
-
 }
 
 
@@ -89,17 +87,18 @@
     [self setNeedsDisplay];
 }
 
+
 - (void)setLine:(NSArray *)lines
 {
     mLines = lines;
 }
+
 
 - (void)changeColor
 {
     mPointColor = [MyColor colorWithRed:arc4random_uniform(255)/255.0
                                   green:arc4random_uniform(255)/255.0
                                    blue:arc4random_uniform(255)/255.0];
-
 }
 
 
@@ -108,7 +107,7 @@
 
 - (MyPoint *)touchedPoint:(UITouch *)touch
 {
-    return [MyPoint pointWithPoint:[touch locationInView:self] time:[touch timestamp] color:mPointColor];
+    return [MyPoint pointWithPoint:[touch locationInView:self] time:[NSDate timeIntervalSinceReferenceDate] color:mPointColor];
 }
 
 
@@ -124,14 +123,15 @@
 - (void)drawInContext:(CGContextRef)context
 {
     CGContextBeginPath(context);
-    for (MyLine *line in mLines) {
+    
+    for (MyLine *line in mLines)
+    {
         CGContextSetRGBStrokeColor(context, line.start.color.red, line.start.color.green, line.start.color.blue, 1);
         CGContextMoveToPoint(context, line.start.point.x, line.start.point.y);
         CGContextAddLineToPoint(context, line.end.point.x, line.end.point.y);
-        //sleep(line.end.time - line.start.time);
+        
         CGContextStrokePath(context);
     }
 }
-
 
 @end

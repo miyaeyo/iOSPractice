@@ -14,9 +14,7 @@
 
 @property (nonatomic, weak) id <DrawingDelegate> delegate;
 
-- (void)draw;
-- (void)replay;
-- (void)changeColor;
+- (void)clear;
 - (void)storePoint:(MyPoint *)point isEdge:(BOOL)edge;
 - (NSArray *)takeOutLines;
 

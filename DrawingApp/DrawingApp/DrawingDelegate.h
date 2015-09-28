@@ -19,8 +19,6 @@
 
 - (void)didStartDrawing:(MyPoint *)point;
 - (void)drawingWithPoint:(MyPoint *)point;
-- (void)didChangeColor;
-- (void)didReplayWithline:(NSArray *)line;
 
 
 @end

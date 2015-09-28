@@ -10,12 +10,13 @@
 #import "DrawingView.h"
 #import "Recoder.h"
 #import "UIButton+MyButton.h"
+#import "MyLine.h"
 
 @implementation ViewController
 {
     UILabel *mTitleLabel;
     DrawingView *mDrawingView;
-    UIButton *mDrawButton;
+    UIButton *mClearButton;
     UIButton *mColorButton;
     UIButton *mReplayButton;
     
@@ -66,7 +67,7 @@
     {
         mTitleLabel = nil;
         mDrawingView = nil;
-        mDrawButton = nil;
+        mClearButton = nil;
         mColorButton = nil;
         mReplayButton = nil;
         // mRecoder release는 ARC로 설정해두면 여기서 불리는가???
@@ -87,42 +88,48 @@
 - (void)drawingWithPoint:(MyPoint *)point
 {
     [mRecoder storePoint:point isEdge:NO];
-    [mDrawingView setLine:[mRecoder takeOutLines]];
-    [mDrawingView didChangePoint];
-}
-
-
-- (void)didReplayWithline:(NSArray *)line
-{
-    
-}
-
-
-- (void)didChangeColor
-{
-    [mDrawingView changeColor];
+    [self startDrawingWithLine:[mRecoder takeOutLines]];
 }
 
 
 #pragma mark - actions
 
 
-- (IBAction)drawButtonTapped:(id)sender
+- (IBAction)clearButtonTapped:(id)sender
 {
-    [mRecoder draw];
-    [mDrawingView didChangePoint];
+    [mRecoder clear];
+    [self startDrawingWithLine:[mRecoder takeOutLines]];
 }
 
 
 - (IBAction)changeColorButtonTapped:(id)sender
 {
-    [mRecoder changeColor];
+    [mDrawingView changeColor];
 }
 
 
 - (IBAction)replayButtonTapped:(id)sender
 {
-    [mRecoder replay];
+//    UIView *preview = [[UIView alloc] initWithFrame:[[self drawingView] frame]];
+//    preview.backgroundColor = [UIColor whiteColor];
+//    [[self view] addSubview:preview];
+    
+    
+    [mDrawingView removeFromSuperview];
+    
+    [self setupDrawingView];
+    
+    NSMutableArray *tempLineStorage = [[NSMutableArray alloc] init];
+    
+    for (MyLine *line in [mRecoder takeOutLines])
+    {
+        [tempLineStorage addObject:line];
+        
+        NSTimeInterval delayInSeconds = line.end.time - line.start.time;
+        [NSThread sleepForTimeInterval:delayInSeconds];
+        [self startDrawingWithLine:tempLineStorage];
+        
+    }
 }
 
 
@@ -156,7 +163,7 @@
 
 - (void)setupButtons
 {
-    mDrawButton = [UIButton myButtonWithTitle:@"DRAW" target:self action:@selector(drawButtonTapped:)];
+    mClearButton = [UIButton myButtonWithTitle:@"CLEAR" target:self action:@selector(clearButtonTapped:)];
     mColorButton = [UIButton myButtonWithTitle:@"COLOR" target:self action:@selector(changeColorButtonTapped:)];
     mReplayButton= [UIButton myButtonWithTitle:@"REPLAY" target:self action:@selector(replayButtonTapped:)];
     
@@ -167,7 +174,7 @@
 - (void)setupButtonLayout
 {
     CGSize size = [[UIScreen mainScreen] bounds].size;
-    NSArray *buttons = @[mDrawButton, mColorButton, mReplayButton];
+    NSArray *buttons = @[mClearButton, mColorButton, mReplayButton];
     
     for (NSInteger i = 0; i < [buttons count]; i++)
     {
@@ -175,6 +182,13 @@
         [button setFrame:CGRectMake(size.width * i / [buttons count], size.height - 50, size.width / [buttons count], 50)];
         [[self view] addSubview:button];
     }
+}
+
+- (void)startDrawingWithLine:(NSArray *)line
+{
+    [mDrawingView setLine:line];
+    [mDrawingView didChangePoint];
+
 }
 
 

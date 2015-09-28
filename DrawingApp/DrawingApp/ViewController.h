@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DrawingDelegate.h"
+#import "DrawingView.h"
 
 @interface ViewController : UIViewController <DrawingDelegate>
 
