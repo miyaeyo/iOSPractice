@@ -45,7 +45,6 @@
 {
     [super touchesBegan:touches withEvent:event];
 
-    
     for (UITouch *touch in touches)
     {
         MyBezierPath *path = [[MyBezierPath alloc] init];
@@ -118,13 +117,13 @@
     
     for (MyBezierPath *path in mPaths)
     {
-        CGContextSetStrokeColorWithColor(context, [path.color CGColor]);
+        [path.color setStroke];
         [path stroke];
     }
     
     for (MyBezierPath *path in [mTempPath allValues])
     {
-        CGContextSetStrokeColorWithColor(context, [path.color CGColor]);
+        [path.color setStroke];
         [path stroke];
     }
 
@@ -139,40 +138,30 @@
     [CATransaction begin];
     mPaths = [NSMutableArray array];
     mTempPath = [NSMutableDictionary dictionary];
+    
     for (CALayer *layer in self.layer.sublayers){
         [layer removeFromSuperlayer];
     }
+    
     [CATransaction commit];
+    
     [self setNeedsDisplay];
 }
 
 
 - (void)replay
 {
-    CGSize screenSize = [self bounds].size;
-
-    UIView *preview = [[UIView alloc] initWithFrame:CGRectMake(5, 5, screenSize.width - 10, screenSize.height - 10)];
-    preview.backgroundColor = [UIColor whiteColor];
-    
-    [self addSubview:preview];
+    UIView *preview = [self setupPreview];
     
     NSTimeInterval total = 0.0;
     
     for (MyBezierPath *path in mPaths)
     {
-        CAShapeLayer *shapeLayer = [CAShapeLayer layer];
-        shapeLayer.path = [path CGPath];
-        shapeLayer.strokeColor = [path.color CGColor];
-        shapeLayer.fillColor = nil;
-        shapeLayer.lineWidth = 5.0f;
-        shapeLayer.lineJoin = kCALineJoinBevel;
-        
-        CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-        pathAnimation.duration = path.time;
-        pathAnimation.fromValue = @(0.0f);
-        pathAnimation.toValue = @(1.0f);
-        
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, total * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        CAShapeLayer *shapeLayer = [self setupShapeLayerForPath:path];
+        CABasicAnimation *pathAnimation = [self setupPathAnimationForPath:path];
+       
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, total * NSEC_PER_SEC), dispatch_get_main_queue(), ^
+        {
             [shapeLayer addAnimation:pathAnimation forKey:@"strokeEnd"];
             [preview.layer addSublayer:shapeLayer];
         });
@@ -190,6 +179,44 @@
                                    blue:arc4random_uniform(255)/255.0];
 }
 
+
+#pragma mark - private
+
+- (UIView *)setupPreview
+{
+    CGSize screenSize = [self bounds].size;
+    
+    UIView *preview = [[UIView alloc] initWithFrame:CGRectMake(5, 5, screenSize.width - 10, screenSize.height - 10)];
+    preview.backgroundColor = [UIColor whiteColor];
+    
+    [self addSubview:preview];
+    
+    return preview;
+}
+
+
+- (CAShapeLayer *)setupShapeLayerForPath:(MyBezierPath *)path
+{
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.path = [path CGPath];
+    shapeLayer.strokeColor = [path.color CGColor];
+    shapeLayer.fillColor = nil;
+    shapeLayer.lineWidth = 5.0f;
+    shapeLayer.lineJoin = kCALineJoinBevel;
+    
+    return shapeLayer;
+}
+
+
+- (CABasicAnimation *)setupPathAnimationForPath:(MyBezierPath *)path
+{
+    CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    pathAnimation.duration = path.time;
+    pathAnimation.fromValue = @(0.0f);
+    pathAnimation.toValue = @(1.0f);
+    
+    return pathAnimation;
+}
 
 
 @end
